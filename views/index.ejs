@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Todo list</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/assets/index.css" type="text/css">
+  <script src="/assets/index.js"></script>
+</head>
+
+<body>
+  <div id="todo-table">
+    <form>
+      <input type="text" name='item' placeholder="Add new item..." required />
+      <button type="submit">Add Item</button>
+    </form>
+    <ul>
+      <% datas.forEach(function (item) { %>
+      <li data-id="<%= item.id %>"><%= item.content%></li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+
+</html>
